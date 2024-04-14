@@ -203,14 +203,8 @@
     .visual .swiper-slide .tit {
         left: auto;
     }
-    .visual .swiper .pause , .visual .swiper .play {
-        left: 30px;
-    }
-    .visual .swiper .prev {
-        left: 30px;
-    }
     .visual .swiper .next {
-        left: 85px;
+        left: 55px;
     }
 }
 @media screen and (max-width:1320px) {
@@ -233,9 +227,6 @@
     } /* 팝업의 높이가 됨 */
     .visual .swiper .swiper_cnt {
         height: 600px;
-    }
-    .visual .swiper .prev, .visual .swiper .next {
-        margin-left: 40px;
     }
     .visual .swiper .pause , .visual .swiper .play {
         left: 5px;
