@@ -2,15 +2,17 @@
     position:fixed; 
     height: 90px;
     width: 100%;
-    color: #0d0d0d;
+    z-index: 100;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
     font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 } /* header는 fixed */
 .header h1 {
-    font-size: 26px;
+    font-size: 24px;
     margin-left: 35px;
 }
 .header h1 span {
@@ -20,7 +22,7 @@
     display: none;
 }
 .header .gnb_wrap {
-    font-size: 30px;
+    font-size: 26px;
     margin-right: 130px;
 }
 .header .gnb_wrap ul {

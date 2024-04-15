@@ -4,64 +4,50 @@
 
 section {
     width: 100vw;
-    margin-top: 90px;
-    height: calc(100vh - 90px);
 }
 .main {
     position: relative;
     color: #fff;
-    background-color: #0d0d0d;
+    background: url(../images/visual_bg.png) no-repeat center center;
+    height: 100vh;
+}
+.main .inner {
+    font-size: 150px;
+    position: absolute;
+    left: 22%;
+    top: 50%;
+    transform: translate(0 , -50%);
+    display: flex;
+    align-items: flex-end;
 }
 .main .tit {
-    font-size: 180px;
-    font-weight: 700;
+    font-style: italic;
+    line-height: 0.8;
 }
-.main .tit .right {
-    position: absolute;
-    right: 0;
-    top: 8%;
+.main .tit02 {
+    margin-left: 1.1em;
 }
-.main .tit .mid {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.main .tit03 {
+    margin-left: 0.3em;
 }
-.main .tit span {
-    color: #00FF19;
-    filter: blur(2px);
+.main .tit strong {
+    font-size: 200px;
 }
-.main .tit .left {
-    position: absolute;
-    left: 0;
-    bottom: 8%;
+.main .inner .right {
+    margin: 0 0 25px -90px;
 }
-.main h2 {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    transform: translate(0 , -50%);
-    font-size: 32px;
+.main .inner .sub {
+    font-size: 18px;
     font-weight: 400;
 }
-.main h2 strong {
-    font-weight: 700;
-}
-.main .line {
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    z-index: -1;
-    transform: translate(-50% , -50%);
-    background-color: #fff;
-    width: calc(100vw + 300px);
-    height: 1px;
+.main .inner .sub span {
+    display: block;
+    line-height: 1.4;
 }
 .call {
     position: fixed;
-    right: 35px;
-    bottom: 40px;
+    right: 60px;
+    bottom: 60px;
     z-index: 102;
     opacity: 1;
     transition: all 0.3s;
@@ -72,6 +58,7 @@ section {
 }
 .call .inner {
     background-color: #0d0d0d;
+    border: 1px solid #fff;
     min-width: 150px;
     height: 150px;
     border-radius: 80px;
@@ -79,12 +66,11 @@ section {
     align-items: center;
     justify-content: center;
     padding: 20px 60px;
-    box-shadow: 2px 1px 25px rgb(0 255 05 / 25%);
+    box-shadow: 2px 2px 10px rgb(255 255 255 / 40%);
     color: #fff;
     cursor: pointer;
     position: relative;
     transition: all .3s;
-    z-index: 100;
     animation: circle 8s linear infinite;
 }
 .call ul {
@@ -93,17 +79,11 @@ section {
     transition: max-width 500ms , opacity .3s; 
     opacity: 0;
 } 
-.call ul li a {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-}
 .call .inner ul li a {
     display: flex; 
     align-items: center; 
     flex-wrap: wrap;
-    font-size: 20px;
+    font-size: 24px;
 }
 .call .inner ul li + li {
     margin-top: 20px
@@ -137,7 +117,7 @@ section {
     transition: all .3s;
     font-size: 26px;
 }
-.call .inner:hover ul{max-width: 400px; opacity: 1 ;} 
+.call .inner:hover ul { max-width: 400px; opacity: 1;} 
 .call .inner:hover { animation: none ;
 }
 @keyframes none { /* 애니메이션을 효과를 미리 설정함 */
@@ -145,3 +125,167 @@ section {
 	100% { transform:rotate(0) } /* 애니메이션이 종료될때의 속성 */
 }
 .call .inner:hover button { opacity: 0;}
+
+.intro {
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+}
+.intro .wrapper {
+    display: flex;
+}
+.intro .sec01 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 160px 150px 0 60px;
+}
+.intro .sec01 span {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    font-weight: 700;
+    font-size: 130px;
+    color: #D0D0D0;
+    display: block;
+}
+.intro .sec01 .photo {
+    overflow: hidden;
+    text-align: center;
+    line-height: 0;
+    font-size: 0;
+}
+.intro .sec01 .photo img {
+    width: 272px;
+    height: 272px;
+    border-radius: 100%;
+}
+.intro .sec01 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'pretandard';
+    margin: 22px 0 20px 0;
+}
+.intro .sec01 p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+.intro .sec01 em {
+    display: block;
+    font-weight: 700;
+}
+.intro .sec01 h2 em {
+    font-size: 20px;
+    color: #333;
+}
+.intro .sec02 {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    margin: 70px 0 0 50px;
+    font-family: 'pretandard';
+}
+.intro .sec02 dl {
+    width: 50%;
+}
+.intro .sec02 dl div {
+    margin-bottom: 52px;
+    font-weight: 700;
+}
+.intro .sec02 dt {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: 1.5px underline;
+}
+.intro .sec02 dd {
+    font-size: 21px;
+    line-height: 2;
+    display: flex;
+}
+.intro .sec02 dd span {
+    margin-right: 40px;
+}
+.intro .sec02 .info05 dd {
+    display: inline-block;
+    padding: 1px 22px;
+    border: 1px solid #0d0d0d;
+    border-radius: 30px;
+    margin: 0 10px 20px 0;
+    line-height: 1;
+}
+.index {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.index h1 {
+    padding: 0 95px 0 40px;
+    background-color: #000;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.index .cnt {
+    display: flex;
+    margin-left: 115px;
+    font-family: 'pretandard'
+}
+.index .cnt li {
+    margin-right: 140px;
+    position: relative;
+}
+.index .cnt li a {
+    display: block;
+}
+.index .cnt li a .photo:hover {
+    transform: scale3d(0.92,0.92,1);
+}
+.index .cnt li a .photo {
+    width: 400px;
+    height: 400px;
+    transition: 0.3s linear;
+}
+.index .cnt li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.index .cnt li a .sub {
+    margin: 15px 0 12px 0;
+}
+.index .cnt li a .sub span {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.index .cnt li a .tit {
+    font-size: 34px;
+    font-weight: 700;
+}
+.index .cnt li.kps {
+    margin-top: 20px;
+}
+.index .cnt li.hospital {
+    margin-top: 120px;
+}
+.index .cnt button {
+    transition: 0.3s linear;
+    position: absolute;
+    right: 0;
+    top: 458px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 1px solid #0d0d0d;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54004 7.30225C0.987753 7.30225 0.540038 7.74996 0.540039 8.30225C0.54004 8.85453 0.987756 9.30225 1.54004 9.30225L1.54004 7.30225ZM20.0533 9.00932C20.4438 8.6188 20.4438 7.98563 20.0533 7.59511L13.6893 1.23116C13.2988 0.840634 12.6656 0.840635 12.2751 1.23116C11.8846 1.62168 11.8846 2.25485 12.2751 2.64537L17.932 8.30222L12.2751 13.9591C11.8846 14.3496 11.8846 14.9828 12.2751 15.3733C12.6657 15.7638 13.2988 15.7638 13.6893 15.3733L20.0533 9.00932ZM1.54004 9.30225L19.3462 9.30222L19.3462 7.30222L1.54004 7.30225L1.54004 9.30225Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+.index .cnt button:hover {
+    border: 1px solid #fff;
+    background-color: #000;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54004 7.30225C0.987753 7.30225 0.540038 7.74996 0.540039 8.30225C0.54004 8.85453 0.987756 9.30225 1.54004 9.30225L1.54004 7.30225ZM20.0533 9.00932C20.4438 8.6188 20.4438 7.98563 20.0533 7.59511L13.6893 1.23116C13.2988 0.840634 12.6656 0.840635 12.2751 1.23116C11.8846 1.62168 11.8846 2.25485 12.2751 2.64537L17.932 8.30222L12.2751 13.9591C11.8846 14.3496 11.8846 14.9828 12.2751 15.3733C12.6657 15.7638 13.2988 15.7638 13.6893 15.3733L20.0533 9.00932ZM1.54004 9.30225L19.3462 9.30222L19.3462 7.30222L1.54004 7.30225L1.54004 9.30225Z' fill='white'/%3E%3C/svg%3E%0A");
+}
