@@ -3,13 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../portfolio/portfolio/css/">
-    <script src="../portfolio/portfolio/js/jquery-3.7.1.min.js"></script>
-    <script src="../portfolio/portfolio/js/main.js"></script>
-    <script src="../portfolio/portfolio/js/common.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="portfolio/css/main.css">
+    <script src="portfolio/js/jquery-3.7.1.min.js"></script>
+    <!--swiper라이브러리--->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="portfolio/js/main.js"></script>
+    <script src="portfolio/js/common.js"></script>
     <title>PORTFOLIO</title>
 </head>
 <body>
-
+    <div id="wrap">
+        <header class="header">
+            <h1>
+                <span>2024</span>
+                <span>Web Publisher</span>
+                <span>Portfolio</span>
+            </h1>
+            <nav class="gnb">
+                <div class="gnb_open"><button>메뉴열기</button></div>
+                <div class="gnb_wrap">
+                    <ul> 
+                        <li data-link="main"><a href="#n">HOME</a></li>
+                        <li data-link="intro"><a href="#n">WHO I AM</a></li>
+                        <li data-link="project"><a href="#n">PROJECT</a></li>
+                        <li data-link="contact"><a href="#n">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="gnb_close"><button>메뉴닫기</button></div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <section data-menu="main" class="main">
+                            <div class="tit">
+                                <div class="right">BULID UP</div>
+                                <div class="mid">GROW UP</span></div>
+                                <div class="left">SERVE TO</div>
+                            </div>
+                            <h2>무한한 성장력을 지닌<br>
+                                웹퍼블리셔 <strong>지혜인입니다.</strong></h2>
+                            <div class="line"></div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section data-menu="intro" class="intro">
+                            <div></div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section data-menu="project" class="project"></section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section data-menu="contact" class="contact"></section>
+                    </div>
+                </div>
+            </div>
+            <aside class="call">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <a href="#n" class="e-mail">
+                                <span>jhi6325@naver.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="phone">
+                                <span>010-6579-1476</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button>Contact Me</button>
+                </div>
+            </aside>
+        </div>
+    </div>
 </body>
 </html>

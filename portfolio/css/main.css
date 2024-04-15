@@ -1,3 +1,147 @@
-@import url(../css/default.css);
-@import url(../css/layout.css);
 @import url(../css/common.css);
+@import url(../css/layout.css);
+@import url(../css/default.css);
+
+section {
+    width: 100vw;
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+}
+.main {
+    position: relative;
+    color: #fff;
+    background-color: #0d0d0d;
+}
+.main .tit {
+    font-size: 180px;
+    font-weight: 700;
+}
+.main .tit .right {
+    position: absolute;
+    right: 0;
+    top: 8%;
+}
+.main .tit .mid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.main .tit span {
+    color: #00FF19;
+    filter: blur(2px);
+}
+.main .tit .left {
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+}
+.main h2 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0 , -50%);
+    font-size: 32px;
+    font-weight: 400;
+}
+.main h2 strong {
+    font-weight: 700;
+}
+.main .line {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    z-index: -1;
+    transform: translate(-50% , -50%);
+    background-color: #fff;
+    width: calc(100vw + 300px);
+    height: 1px;
+}
+.call {
+    position: fixed;
+    right: 35px;
+    bottom: 40px;
+    z-index: 102;
+    opacity: 1;
+    transition: all 0.3s;
+}
+@keyframes circle { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:rotate(0) }  /* 애니메이션을 시작할때의 속성 */
+	100% { transform:rotate(360deg) } /* 애니메이션이 종료될때의 속성 */
+}
+.call .inner {
+    background-color: #0d0d0d;
+    min-width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    box-shadow: 2px 1px 25px rgb(0 255 05 / 25%);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    z-index: 100;
+    animation: circle 8s linear infinite;
+}
+.call ul {
+    max-width: 0;
+    overflow: hidden; 
+    transition: max-width 500ms , opacity .3s; 
+    opacity: 0;
+} 
+.call ul li a {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.call .inner ul li a {
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+.call .inner ul li + li {
+    margin-top: 20px
+}
+.call .inner ul li a span {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+}
+.call .inner ul li a span::before {
+    position: absolute;
+    left: 0;
+    top:5px;
+    width: 21px;
+    height: 21px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.call .inner ul li a.e-mail span::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_170_461' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='21' height='22'%3E%3Crect y='0.803467' width='20.2979' height='20.2979' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_170_461)'%3E%3Cpath d='M3.64311 17.2955C3.2159 17.2955 2.85429 17.1475 2.55828 16.8515C2.26226 16.5555 2.11426 16.1939 2.11426 15.7667V6.1382C2.11426 5.71099 2.26226 5.34937 2.55828 5.05336C2.85429 4.75735 3.2159 4.60934 3.64311 4.60934H16.6546C17.0818 4.60934 17.4434 4.75735 17.7394 5.05336C18.0354 5.34937 18.1834 5.71099 18.1834 6.1382V15.7667C18.1834 16.1939 18.0354 16.5555 17.7394 16.8515C17.4434 17.1475 17.0818 17.2955 16.6546 17.2955H3.64311ZM10.1488 11.4241L16.9148 7.09774L16.7847 5.87794L10.1488 10.1067L3.51298 5.87794L3.38286 7.09774L10.1488 11.4241Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.call .inner ul li a.phone span::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_170_464' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='19' height='20'%3E%3Crect x='0.363281' y='0.541565' width='18.6372' height='18.6372' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_170_464)'%3E%3Cpath d='M15.8559 16.8491C14.2381 16.8491 12.6397 16.4964 11.0607 15.7911C9.4817 15.0857 8.04508 14.0859 6.75083 12.7916C5.45658 11.4974 4.45677 10.0608 3.75141 8.48179C3.04604 6.9028 2.69336 5.3044 2.69336 3.68659C2.69336 3.45363 2.77101 3.25949 2.92632 3.10418C3.08163 2.94887 3.27577 2.87122 3.50874 2.87122H6.65376C6.83496 2.87122 6.99674 2.93269 7.13911 3.05565C7.28147 3.1786 7.3656 3.3242 7.39148 3.49246L7.89624 6.21038C7.92213 6.41746 7.91566 6.59218 7.87683 6.73455C7.838 6.87692 7.76682 6.99987 7.66328 7.10341L5.78014 9.00596C6.03899 9.48483 6.34638 9.94752 6.7023 10.394C7.05822 10.8406 7.44973 11.2709 7.87683 11.6851C8.27805 12.0863 8.69868 12.4584 9.13872 12.8013C9.57877 13.1443 10.0447 13.4582 10.5365 13.7429L12.3614 11.918C12.4779 11.8015 12.63 11.7142 12.8176 11.6559C13.0053 11.5977 13.1897 11.5815 13.3709 11.6074L16.05 12.151C16.2312 12.2028 16.38 12.2966 16.4965 12.4325C16.613 12.5684 16.6713 12.7205 16.6713 12.8887V16.0337C16.6713 16.2667 16.5936 16.4608 16.4383 16.6161C16.283 16.7715 16.0888 16.8491 15.8559 16.8491Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.call button {
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .3s;
+    font-size: 26px;
+}
+.call .inner:hover ul{max-width: 400px; opacity: 1 ;} 
+.call .inner:hover { animation: none ;
+}
+@keyframes none { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:rotate(0) }  /* 애니메이션을 시작할때의 속성 */
+	100% { transform:rotate(0) } /* 애니메이션이 종료될때의 속성 */
+}
+.call .inner:hover button { opacity: 0;}
