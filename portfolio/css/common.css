@@ -1,0 +1,75 @@
+@charset "utf-8";/*이 css문서는 utf-8방식으로 인코딩 되어 있습니다. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');/*영문웹폰트*/
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../../portfolio/fonts/Pretendard-Regular.woff2) format('woff2'), url(../../portfolio/fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../../portfolio/fonts/Pretendard-Bold.woff2) format('woff2'), url(../../portfolio/fonts/Pretendard-Bold.woff) format('woff');
+}
+
+/*한글웹폰트*/
+*::selection {
+    background-color: #00FF19;
+    color: #1d1d1d;
+}
+*::-moz-selection { /*호환성을 위한 코드*/
+    background-color: #00FF19;
+    color: #1d1d1d;
+}
+/*font-family에 여러 폰트를 쓰는 것은 순서대로 적용이 된다.*/
+body {
+    font-family: 'Cormorant', 'Pretendard', sans-serif;
+    font-size: 15px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1740px; /* 넓이 제한 */
+    margin: 0 auto; /* 센터 */
+}
+#wrap { /*id="wrap"에 적용되는 스타일 */
+    min-width: 100%;
+    overflow: hidden; /*sticky 사용할 때는 쓰면 안됨*/
+}
+/* Wrapper의 사이즈 1280 + 40px(좌우여백) = 1320 사이즈를 줄였을 때 부드럽게 들어가기 위해서*/
+@media screen and (max-width:1600px) {
+    .wrapper {
+        width: 1320px; /* 넓이 제한 */
+        margin: 0 auto; /* 센터 */
+    }
+}
+@media screen and (max-width:1320px) {
+    .wrapper {
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨
+        디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에*/
+        margin: 0 60px; 
+        /* 그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+    } 
+}
+@media screen and (max-width:1024px) {
+    html, body {
+        font-size: 14px;
+    }
+} /*media*/
+@media screen and (max-width:768px) {
+    html, body {
+        font-size: 13px;
+    }
+    .wrapper {
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨
+        디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에*/
+        margin: 0 20px; 
+        /* 그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+    }  
+}
