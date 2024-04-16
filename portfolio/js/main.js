@@ -3,10 +3,12 @@ $(document).ready(function(){
         slidesPerView: 1,
         spaceBetween: 0,
         mousewheel: true,
+        freeMode: false,
+    });
+    var swiper2 = new Swiper(".section_swiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        mousewheel: true,
         freeMode: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+    });
 })

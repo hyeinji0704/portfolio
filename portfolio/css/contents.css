@@ -1,0 +1,413 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+.concept {
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/kps_con_bg.png) no-repeat center center /cover;
+    color: #fff;
+    position: relative;
+}
+.concept::after {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: calc(100% - 5px);
+    content: "";
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.concept::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    content: "";
+    background-color: #616365;
+}
+.concept h2 {
+    position: absolute;
+    left: 38px;
+    top: 60px;
+    font-size: 20px;
+    padding-top: 7px;
+}
+.concept h2::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background-color: #DC010C;
+}
+.concept .con {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.concept .con > li {
+    width: 50%;
+    height: 50%;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.concept .con > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.concept .con .con01 , .concept .con .con02 {
+    padding-top: 100px;
+}
+.concept .con .con01 ,.concept .con .con03 {
+    text-align: center;
+}
+.concept .con .con02 ,.concept .con .con04 {
+    align-items: flex-start;
+    padding-left: 70px;
+}
+.concept .con .con01 > .tit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.concept .con .con01 > .tit > strong {
+    font-size: 30px;
+}
+.concept .con .con01 > .tit > i {
+    display: block;
+    width: 19px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.17004C0.447716 7.17004 1.75341e-07 7.61776 0 8.17004C-1.75341e-07 8.72233 0.447715 9.17004 1 9.17004L1 7.17004ZM20.7071 8.87716C21.0976 8.48663 21.0976 7.85347 20.7071 7.46294L14.3431 1.09898C13.9526 0.708456 13.3195 0.708456 12.9289 1.09898C12.5384 1.4895 12.5384 2.12267 12.9289 2.51319L18.5858 8.17005L12.9289 13.8269C12.5384 14.2174 12.5384 14.8506 12.9289 15.2411C13.3195 15.6316 13.9526 15.6316 14.3431 15.2411L20.7071 8.87716ZM1 9.17004L20 9.17005L20 7.17005L1 7.17004L1 9.17004Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 150px;
+}
+.concept .con .con01 .sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 783px;
+    height: 120px;
+    background-color: #fff;
+    color: #0d0d0d;
+    border-radius: 60px;
+    overflow: hidden;
+    font-weight: 600;
+    font-family: 'pretandard';
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 100;
+}
+.concept .con .con01 .sub::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 22em;
+    height: 100%;
+    content: "";
+    border-radius: 60px;
+    background-color: #0d0d0d;
+}
+.concept .con .con01 .sub:hover:before {
+    animation-name: long_move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function:  ease-in-out;
+}
+.concept .con .con01 .sub:hover .aft {
+    color: #fff;
+}
+@keyframes long_move { /* 애니메이션을 효과를 미리 설정함 */
+	0% { width: 22em; transform: translatex(0);}  /* 애니메이션을 시작할때의 속성 */
+	100% { width: 32em; transform: translatex(65%); } /* 애니메이션이 종료될때의 속성 */
+}
+.concept .con .con01 .sub .bef {
+    width: 22em;
+    color: #fff;
+}
+.concept .con .con01 .sub .aft {
+    width: 28em;
+    padding: 0 5px;
+}
+.concept .con .tit {
+    font-size: 30px;
+    font-weight: 700;
+}
+.concept .con .con02 .tit {
+    margin-bottom: 76px;
+}
+.concept .con .con02 > ul {
+    display: flex;
+    width: 100%;
+}
+.concept .con .con02 > ul > li:first-child {
+    margin-right: 20px;
+    width: 353px;
+}
+.concept .con .con02 > ul > li:last-child {
+    width: calc(100% - 353px);
+    padding-right: 70px;
+}
+.concept .con .con02 > ul > li > p {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 17px;
+    height: 2.5em;
+}
+.concept .con .con02 > ul > li p em {
+    font-size: 15px;
+    margin-left: 10px;
+}
+.concept .con .con02 > ul > li .sub {
+    margin-top: 62px;
+}
+.concept .con .con02 > ul > li .sub div {
+    margin-bottom: 39px;
+    display: flex;
+    align-items: center;
+}
+.concept .con .con02 > ul > li:first-child .sub span {
+    margin-right: 40px;
+} 
+.concept .con .con02 > ul > li:last-child .sub span {
+    margin-right: 60px;
+} 
+.concept .con .con03 .tit {
+    margin-bottom: 80px;
+}
+.concept .con .con03 .sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.concept .con .con03 .sub p {
+    width: 450px;
+    padding: 15px 25px;
+    line-height: 1.8;
+    border-style: dashed;
+    border-color: #DC010C;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.concept .con .con03 .sub p::before {
+    position: absolute;
+    right: -108px;
+    top: 50%;
+    content: "";
+    transform: translate(0 , -50%);
+    width: 110px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='103' height='6' viewBox='0 0 103 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M97.3333 3C97.3333 4.47276 98.5272 5.66667 100 5.66667C101.473 5.66667 102.667 4.47276 102.667 3C102.667 1.52724 101.473 0.333333 100 0.333333C98.5272 0.333333 97.3333 1.52724 97.3333 3ZM0 3.5H100V2.5H0V3.5Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.concept .con .con04 {
+    padding-right: 70px;
+}
+.concept .con .con04 .tit {
+    margin-bottom: 30px;
+}
+.concept .con .con04 .sub .top {
+    display: flex;
+    padding-bottom: 18px;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #fff;
+}
+.concept .con .con04 .sub .top li:first-child {
+    width: 30%;
+}
+.concept .con .con04 .sub .top li:last-child {
+    width: 70%;
+    padding-right: 70px;
+}
+.concept .con .con04 .sub .top li strong {
+    display: block;
+    font-size: 20px;
+}
+.concept .con .con04 .sub .top li span {
+    padding-top: 125px;
+    display: inline-block;
+    margin-right: 75px;
+    position: relative;
+}
+.concept .con .con04 .sub .top li span::after {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translate(-50%, 0);
+    content: "";
+    width: 102px;height: 102px;
+    border-radius: 100%;
+    border: 1px solid rgba(230, 230, 230, 0.6);
+}
+.concept .con .con04 .sub .top li span.col01::after {
+    background-color: #9CD0FF;
+}
+.concept .con .con04 .sub .top li span.col02::after {
+    background-color: #001154;
+}
+.concept .con .con04 .sub .top li span.col03::after {
+    background-color: #FFFFFF;
+}
+.concept .con .con04 .sub .top li span.col04::after {
+    background-color: #1D1D1D;
+}
+.concept .con .con04 .sub .top li:first-child span {
+    padding-left: 20px;
+}
+.concept .con .con04 .sub .top li:first-child span::after {
+    left: 60%;
+}
+.concept .con .con04 .sub p {
+    padding-top: 20px;
+    width: 83%;
+}
+
+.section_swiper .swiper-slide { width: auto; }
+.design {
+    height: 100vh;
+    background: #0E142D;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 4000px;
+}
+.design h2 {
+    position: absolute;
+    left: 38px;
+    top: 60px;
+    font-size: 20px;
+    padding-top: 7px;
+}
+.design h2::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background-color: #DC010C;
+}
+.design .detail {
+    margin: 0 57px 0 110px;
+}
+.design .detail dl {
+    width: 320px;
+}
+.design .detail dl div {
+    margin-bottom: 47px;
+}
+.design .detail dl dt {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.design .detail  dl dd {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'pretandard';
+}
+.design .detail  dl .overview dd {
+    line-height: 1.6;
+}
+.design .detail  dl .grid dd {
+    line-height: 2;
+}
+.design .detail  dl .grid dd span {
+    width: 10em;
+    display: inline-block;
+}
+.design .detail  dl .grid dd strong {
+    width: 20em;
+}
+
+.mobile {
+    height: 100vh;
+    background: url(../images/kps_mobile_img.png) no-repeat center center/ cover;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.mobile::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 41.2%;
+    height: 100vh;
+    content: "";
+    background-color: rgba(14, 20, 45, 0.4);
+}
+.mobile .tit {
+    position: absolute;
+    left: 38px;
+    top: 60px;
+}
+.mobile h2 {
+    font-size: 20px;
+    position: relative;
+    width: 4.8em;
+    padding-top: 7px;
+    margin-bottom: 5px;
+}
+.mobile h2::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background-color: #DC010C;
+}
+.mobile .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile .detail.d_01 {
+    margin: 0 130px 0 150px;
+}
+.mobile .detail.d_02 dl {
+    margin-top: 200px;
+}
+.mobile .detail dl {
+    width: 200px;
+}
+.mobile .detail dl div {
+    margin-bottom: 47px;
+}
+.mobile .detail dl dt {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.mobile .detail dl dd {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'pretandard';
+}
+.mobile .detail  dl .grid dd {
+    line-height: 2;
+}
+.mobile .detail  dl .grid dd span {
+    width: 7em;
+    display: inline-block;
+}
+.mobile .detail  dl .grid dd strong {
+    width: 10em;
+}
