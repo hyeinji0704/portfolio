@@ -31,16 +31,17 @@
 .header .gnb_wrap ul li {
     margin-left: 30px;
 }
-.header .gnb_wrap ul li.active { 
+.header .gnb_wrap ul li.active{ 
     position: relative;
 } 
 .header .gnb_wrap ul li.active::after {
     position: absolute;
     left: 50%;
     top: -10px;
+    z-index: 10;
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background-color: #0d0d0d;
+    background-color: #fff;
     content: "";
 }/* 메뉴를 클릭했을때의 스타일 */
