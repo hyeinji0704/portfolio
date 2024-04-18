@@ -774,7 +774,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: url(../images/hospital_mobile_bg.png)no-repeat center bottom ;
+    background: url(../images/hospital_mobile_bg.png)no-repeat center bottom/cover ;
 }
 .h_container .mobile::after {
     position: absolute;
