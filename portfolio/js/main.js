@@ -41,6 +41,7 @@ $(document).ready(function(){
 
     var cursor = document.querySelector(".cursor");
     var img_slide = document.querySelectorAll(".swiper-slide");
+    var photo_hover = document.querySelectorAll(".project .photo, .index .cnt li a, .project .view_btn a, .contact ul li a");
     function cursorEvent(e){
         cursor.style.top = e.pageY - scrollY + "px";
         cursor.style.left = e.pageX + "px";
@@ -56,10 +57,27 @@ $(document).ready(function(){
             });
         }  
     });
+    photo_hover.forEach(link =>{
+        if ( link !== photo_hover ){
+            link.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+            });
+            link.addEventListener("mouseover", () => {
+                cursor.classList.add("active");
+            });
+        }  
+    });
+    
     /*$(".project .photo").on("mouseover", function() {
         $('.cursor').addClass('active')
     }); // Hover
     $(".project .photo").on("mouseout", function() {
          $('.cursor').removeClass('active')
     }); // Mouseout*/
+
+    AOS.init({
+        offset: 500, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 850, // 애니메이션 효과가 작동되는 시간
+        easing: 'linear', // 가속도
+    });
 })

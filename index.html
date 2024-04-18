@@ -9,6 +9,9 @@
     <!--swiper라이브러리--->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--AOS라이브러리--->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="portfolio/js/main.js"></script>
     <script src="portfolio/js/common.js"></script>
     <title>PORTFOLIO</title>
@@ -40,34 +43,33 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <section data-menu="main" class="main">
-                            <div class="inner">
-                                <div class="left">
-                                    <div class="tit tit01">
+                            <div class="inner" data-aos="fade-up">
+                                <div class="left main_tit" >
+                                    <div class="tit tit01 typing-demo">
                                         <div ><strong>B</strong>ULID UP</div>
                                     </div>
-                                    <div class="tit tit02">
+                                    <div class="tit tit02 typing-demo">
                                         <div ><strong>G</strong>ROW UP</div>
                                     </div>
-                                    <div class="tit tit03">
+                                    <div class="tit tit03 typing-demo">
                                         <div ><strong>S</strong>ERVE TO</div>
                                     </div>
                                 </div>
-                                <div class="right">
+                                <div class="right main_tit" >
                                     <div class="sub">
-                                        <span>1. [동사] 무언가를 창조하거나 개발하다.</span>
+                                        <span >1. [동사] 무언가를 창조하거나 개발하다.</span>
                                         <span>2. [동사] 성장하다, 자라다.</span>
                                         <span>3. [동사] -의 역할을 하다. </span>
                                     </div>
                                 </div>
-                                <div class="circle"></div>
                             </div>
                         </section>
                     </div>
                     <div class="swiper-slide">
                         <section data-menu="intro" class="intro">
                             <div class="wrapper">
-                                <div class="sec01">
-                                    <span>;Who I am</span>
+                                <div class="sec01" >
+                                    <span >;Who I am</span>
                                     <div class="photo"><img src="portfolio/images/profile.png" alt=""></div>
                                     <h2>Build. Grow. Serve
                                         <em>;개발하고, 성장하고, 제공하자</em>
@@ -136,7 +138,7 @@
                     </div>
                     <div class="swiper-slide">
                         <section data-menu="index" class="index">
-                            <h2><strong>iNDEX</strong><br>;PROJECTs</h2>
+                            <h2 ><strong>iNDEX</strong><br>;PROJECTs</h2>
                             <ul class="cnt">
                                 <li class="kps on">
                                     <a href="#n">
@@ -288,6 +290,6 @@
             </aside>
         </div>
     </div>
-    <div class="cursor"><div class="bg">Scroll</div></div>
+    <div class="cursor"><div class="bg"></div></div>
 </body>
 </html>
