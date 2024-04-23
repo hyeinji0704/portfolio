@@ -1,3 +1,15 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "liveSassCompile.settings.generateMap": false,	//css map파일 생성
+    "liveSassCompile.settings.autoprefix": false,	//벤더프리픽스
+    "liveSassCompile.settings.compileOnWatch": false,	//Watch Sass 실행 시 모든 .scss 컴파일
+    "liveSassCompile.settings.watchOnLaunch": true,	//Watch Sass 자동 실행
+    "liveSassCompile.settings.formats": [	//포맷 설정(복수 설정 가능)
+    
+    {
+        "format": "compressed",
+        "extensionName": ".css",
+        "savePath": "../portfolio/pusan_uni/css",
+    }
+    ],
 }
