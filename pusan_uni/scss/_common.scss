@@ -18,6 +18,18 @@ $font_large : 36px;
 $font_medium : 26px;
 $font_regular : 18px;
 $font_small : 14px;
+@mixin left_50 {
+    left: 50%;
+}
+@mixin transformX {
+    transform: translateX(-50%);
+}
+@mixin transformY {
+    transform: translateY(-50%);
+}
+@mixin none {
+    display: none;
+}
 @mixin position_left {
     position: absolute;
     left: 0;

@@ -16,3 +16,9 @@ setting.json  열어서 추가
 */
 @import "default", "common", "layout";
 
+.visual {
+    height: 100vh;
+    @include background;
+    background-size: cover;
+    background-image: url(../images/visual_bg01.png);
+}
