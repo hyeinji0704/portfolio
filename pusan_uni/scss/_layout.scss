@@ -38,12 +38,12 @@
                         .close {display: block;}
                     }
                     button {
-                        padding: 0 34px 0 0;
+                        padding: 0 45px 0 0;
                         @include block;
                         position: relative;
                         &::after {
                             @include position_right;
-                            right: 4px;
+                            right: 15px;
                             top: 8px;
                             content: "";
                             @include background;
@@ -61,12 +61,13 @@
                     ul {
                         display: none;
                         @include position_left;
+                        z-index: 10;
                         top: 38px;
                         width: 100%;
                         background-color: $white;
                         border-radius: 5px;
                         padding: 10px 0 10px 10px;
-                        color: $base_color;
+                        color: $grey_100;
                         li {
                             a {
                                 @include block;
@@ -114,41 +115,248 @@
                 text-align: center;
                 font-size: 20px;
                 font-weight: 700;
+                a.link {
+                    position: relative;
+                    &::before {
+                        @include position_right;
+                        right: -26px;
+                        top: 50%;
+                        @include transformY;
+                        @include background;
+                        @include content;
+                        width: 20px;
+                        height: 20px;
+                        background-size: contain;
+                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23ddd'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+                    &:hover {
+                        &::before {
+                            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+                &:nth-child(2), &:nth-child(5) {
+                    >a {
+                        &::after {
+                            @include position_right;
+                            right: -26px;
+                            top: 3.5px;
+                            @include background;
+                            @include content;
+                            width: 22px;
+                            height: 22px;
+                            background-size: contain;
+                            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
                 > a {
                     line-height: 80px;
+                    position: relative;
                 }
                 &.on {
+                    color: $point_100;
+                    ::after {
+                        @include position_left;
+                    }
                     .depth02 {
                         display: flex;
+                        &.length08 {    
+                            flex-wrap: wrap;
+                        }
                     }
                 }
             }
             .depth02 {
-                position: relative;
-                &::before{
-                    @include position_left;
-                    left: 50%;
-                    top: 0;
-                    z-index: -1;
-                    @include transformX;
-                    content: "";
-                    width: 100vw;
-                    height: 100%;
-                    background-color: $point_100;
-                }
+                color: $white;
                 @include none;
                 @include position_left;
                 width: 100%;
+                &::before{
+                    @include position_left;
+                    @include transformX;
+                    left: 50%;
+                    top: 0;
+                    z-index: -1;
+                    @include content;
+                    width: 100vw;
+                    height: 100%;
+                    background-color: rgba($color: $point_100, $alpha: 0.9);
+                }
+                &::after {
+                    @include position_right;
+                    bottom: 0;
+                    @include content;
+                    z-index: -1;
+                    width: 421px;
+                    height: 421px;
+                    @include background;
+                    background-size: cover;
+                    background-image: url(../images/gnb_bg.png);
+                    opacity: 0.05;
+                }
+                >li {
+                    text-align: left;
+                    width: 16.66%;
+                    position: relative;
+                    padding: 38px 0 40px 32px;
+                    >a {
+                        font-size: 19px;
+                        font-weight: 600;
+                    }
+                    &:hover, &.on {
+                        >a {
+                            position: relative;
+                        &::after {
+                            @include position_left;
+                            @include content;
+                            bottom: -12px;
+                            width: 100%;
+                            height: 3px;
+                            background-color: $white;
+                        }
+                        }
+                    }
+                    &::before {
+                        @include position_left;
+                        @include content;
+                        top: 50%;
+                        @include transformY;
+                        width: 1px;
+                        height: 90%;
+                        background-color: rgba($color: $white , $alpha: 0.2)
+                    }
+                    &:last-child::after {
+                        @include position_right;
+                        @include content;
+                        top: 50%;
+                        @include transformY;
+                        width: 1px;
+                        height: 90%;
+                        background-color: rgba($color: $white , $alpha: 0.2)
+                    }
+                }
+                .depth03 {
+                    font-size: 17px;
+                    padding-top: 30px;
+                    li {
+                        a {
+                            white-space: nowrap;
+                            line-height: 35px;
+                            display: inline-block;
+                            font-weight: 500;
+                            color: $grey_300;
+                            &:hover {
+                                color: $white;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
                 &.length01 {
                     li {
-                        text-align: left;
-                        &:first-child:nth-last-child(5),
-                        &:first-child:nth-last-child(5) ~ li {
+                        &:first-child {
+                            width: 40%;
+                            .depth03 {
+                                display: flex;
+                                flex-wrap: wrap;
+                                li {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.length02 {
+                    li {
+                        width: 50%;
+                    }
+                }
+                &.length03, &.length04, &.length06 {
+                    li {
+                        width: 25%;
+                    }
+                }
+                &.length07 {
+                    li {
                         width: 20%;
+                    }
+                }
+                &.length08 {    
+                    li {
+                        width: 25%;
+                    }
+                    >li {
+                        &:nth-child(4):after {
+                            @include position_right;
+                            @include content;
+                            top: 50%;
+                            @include transformY;
+                            width: 1px;
+                            height: 90%;
+                            background-color: rgba($color: $white , $alpha: 0.2)
                         }
                     }
                 }
             }
         }
+    }
+    &.menu_over {
+        background-color: $white;
+        color: $main_color;
+        .logo {
+            a {
+                display: block;
+                width: 175px;
+                height: 50px;
+                @include background;
+                background-size: contain;
+                background-image: url(../images/logo_color.svg);            
+            }
+            img {
+                @include none;
+            }
+        }
+        .tnb {
+            div {
+                &.service, &.lang {
+                    button {
+                        &.open::after {
+                            background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8.05052L0 2.14385L1.4 0.765625L6 5.29407L10.6 0.765625L12 2.14385L6 8.05052Z' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+                        }
+                        &.close::after {
+                            background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0.765884L0 6.67256L1.4 8.05078L6 3.52233L10.6 8.05078L12 6.67256L6 0.765884Z' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                    ul {
+                        background-color: $main_color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .gnb {
+            .depth01 {
+                >li {
+                    &:nth-child(2), &:nth-child(5) {
+                        >a {
+                            &::after {
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%232d2d2d'/%3E%3C/g%3E%3C/svg%3E%0A");
+                            }
+                        }
+                    }
+                }
+                > li.on {
+                    &:nth-child(2), &:nth-child(5) {
+                        >a {
+                            &::after {
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23005BAA'/%3E%3C/g%3E%3C/svg%3E%0A");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }

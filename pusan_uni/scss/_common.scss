@@ -4,7 +4,9 @@ $tit_color : #1d1d1d;
 $white : #fff;
 $main_color : #2d2d2d;
 $sub_color : #3d3d3d;
-$base_color : #666;
+$grey_100 : #666;
+$grey_200 : #a9a9a9;
+$grey_300 : #ddd;
 $point_100 : #005BAA;
 $point_200 : #60799D;
 $point_300 : #E6E9EC;
@@ -18,6 +20,9 @@ $font_large : 36px;
 $font_medium : 26px;
 $font_regular : 18px;
 $font_small : 14px;
+@mixin content {
+    content: "";
+}
 @mixin left_50 {
     left: 50%;
 }
@@ -109,7 +114,7 @@ $font_small : 14px;
 @include font-face(
     'SCoreDreamBold',
     '../fonts/SCoreDreamBold.woff2 ',
-    600,
+    600,o
     normal,
     woff2
 );

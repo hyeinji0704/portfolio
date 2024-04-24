@@ -114,7 +114,7 @@ legend {
 }
 @font-face {
   font-family: "SCoreDreamBold";
-  font-style: normal;
+  font-style: o normal;
   font-weight: 600;
   src: url("../fonts/SCoreDreamBold.woff2 ") format("woff2");
 }
@@ -226,14 +226,14 @@ html, body {
   display: block;
 }
 .header .header_top .tnb div.service button, .header .header_top .tnb div.lang button {
-  padding: 0 34px 0 0;
+  padding: 0 45px 0 0;
   display: block;
   position: relative;
 }
 .header .header_top .tnb div.service button::after, .header .header_top .tnb div.lang button::after {
   position: absolute;
   right: 0;
-  right: 4px;
+  right: 15px;
   top: 8px;
   content: "";
   background-position: center center;
@@ -254,6 +254,7 @@ html, body {
   display: none;
   position: absolute;
   left: 0;
+  z-index: 10;
   top: 38px;
   width: 100%;
   background-color: #fff;
@@ -306,14 +307,58 @@ html, body {
   font-size: 20px;
   font-weight: 700;
 }
+.header .gnb .depth01 > li a.link {
+  position: relative;
+}
+.header .gnb .depth01 > li a.link::before {
+  position: absolute;
+  right: 0;
+  right: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23ddd'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.header .gnb .depth01 > li a.link:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.header .gnb .depth01 > li:nth-child(2) > a::after, .header .gnb .depth01 > li:nth-child(5) > a::after {
+  position: absolute;
+  right: 0;
+  right: -26px;
+  top: 3.5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 .header .gnb .depth01 > li > a {
   line-height: 80px;
+  position: relative;
+}
+.header .gnb .depth01 > li.on {
+  color: #005BAA;
+}
+.header .gnb .depth01 > li.on ::after {
+  position: absolute;
+  left: 0;
 }
 .header .gnb .depth01 > li.on .depth02 {
   display: flex;
 }
+.header .gnb .depth01 > li.on .depth02.length08 {
+  flex-wrap: wrap;
+}
 .header .gnb .depth01 .depth02 {
-  position: relative;
+  color: #fff;
   display: none;
   position: absolute;
   left: 0;
@@ -322,20 +367,149 @@ html, body {
 .header .gnb .depth01 .depth02::before {
   position: absolute;
   left: 0;
+  transform: translateX(-50%);
   left: 50%;
   top: 0;
   z-index: -1;
-  transform: translateX(-50%);
   content: "";
   width: 100vw;
   height: 100%;
-  background-color: #005BAA;
+  background-color: rgba(0, 91, 170, 0.9);
 }
-.header .gnb .depth01 .depth02.length01 li {
+.header .gnb .depth01 .depth02::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+  width: 421px;
+  height: 421px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/gnb_bg.png);
+  opacity: 0.05;
+}
+.header .gnb .depth01 .depth02 > li {
   text-align: left;
+  width: 16.66%;
+  position: relative;
+  padding: 38px 0 40px 32px;
 }
-.header .gnb .depth01 .depth02.length01 li:first-child:nth-last-child(5), .header .gnb .depth01 .depth02.length01 li:first-child:nth-last-child(5) ~ li {
+.header .gnb .depth01 .depth02 > li > a {
+  font-size: 19px;
+  font-weight: 600;
+}
+.header .gnb .depth01 .depth02 > li:hover > a, .header .gnb .depth01 .depth02 > li.on > a {
+  position: relative;
+}
+.header .gnb .depth01 .depth02 > li:hover > a::after, .header .gnb .depth01 .depth02 > li.on > a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  bottom: -12px;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.header .gnb .depth01 .depth02 > li::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header .gnb .depth01 .depth02 > li:last-child::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header .gnb .depth01 .depth02 .depth03 {
+  font-size: 17px;
+  padding-top: 30px;
+}
+.header .gnb .depth01 .depth02 .depth03 li a {
+  white-space: nowrap;
+  line-height: 35px;
+  display: inline-block;
+  font-weight: 500;
+  color: #ddd;
+}
+.header .gnb .depth01 .depth02 .depth03 li a:hover {
+  color: #fff;
+  font-weight: 600;
+}
+.header .gnb .depth01 .depth02.length01 li:first-child {
+  width: 40%;
+}
+.header .gnb .depth01 .depth02.length01 li:first-child .depth03 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .gnb .depth01 .depth02.length01 li:first-child .depth03 li {
+  width: 50%;
+}
+.header .gnb .depth01 .depth02.length02 li {
+  width: 50%;
+}
+.header .gnb .depth01 .depth02.length03 li, .header .gnb .depth01 .depth02.length04 li, .header .gnb .depth01 .depth02.length06 li {
+  width: 25%;
+}
+.header .gnb .depth01 .depth02.length07 li {
   width: 20%;
+}
+.header .gnb .depth01 .depth02.length08 li {
+  width: 25%;
+}
+.header .gnb .depth01 .depth02.length08 > li:nth-child(4):after {
+  position: absolute;
+  right: 0;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header.menu_over {
+  background-color: #fff;
+  color: #2d2d2d;
+}
+.header.menu_over .logo a {
+  display: block;
+  width: 175px;
+  height: 50px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/logo_color.svg);
+}
+.header.menu_over .logo img {
+  display: none;
+}
+.header.menu_over .tnb div.service button.open::after, .header.menu_over .tnb div.lang button.open::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8.05052L0 2.14385L1.4 0.765625L6 5.29407L10.6 0.765625L12 2.14385L6 8.05052Z' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+}
+.header.menu_over .tnb div.service button.close::after, .header.menu_over .tnb div.lang button.close::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0.765884L0 6.67256L1.4 8.05078L6 3.52233L10.6 8.05078L12 6.67256L6 0.765884Z' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+}
+.header.menu_over .tnb div.service ul, .header.menu_over .tnb div.lang ul {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+.header.menu_over .gnb .depth01 > li:nth-child(2) > a::after, .header.menu_over .gnb .depth01 > li:nth-child(5) > a::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%232d2d2d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.header.menu_over .gnb .depth01 > li.on:nth-child(2) > a::after, .header.menu_over .gnb .depth01 > li.on:nth-child(5) > a::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_307_1333' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_307_1333)'%3E%3Cpath d='M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z' fill='%23005BAA'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 .visual {
@@ -344,4 +518,9 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/visual_bg01.png);
+}
+
+.pnu_notice {
+  height: 1000px;
+  background-color: #2d2d2d;
 }
