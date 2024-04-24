@@ -5,6 +5,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.svg">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <!--swiper라이브러리-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <title>부산대학교</title>
@@ -383,7 +386,43 @@
             </div>
         </header>
         <div id="container" class="container">
-            <section class="visual"></section>
+            <section class="visual">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <img src="images/visual_bg01.png" alt="">
+                            <div class="tit tit01">
+                                <p>대한민국 남부권 발전의 중심이 되다</p>
+                                <h2>부산대 - 부산교대 글로컬대학<br>
+                                    최종선정</h2>
+                                <div class="more"><a href="#n">자세히 보기</a></div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/visual_bg02.png" alt="">
+                            <div class="tit tit02">
+                                <h2>글로벌 연구중심대학의 꿈과 도전!</h2>
+                                <span>PNU for Global Excellence</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/visual_bg03.png" alt="">
+                            <div class="tit tit03">
+                                <h2>2024 세계대학평가 국내종합대 '9위'</h2>
+                                <span>부산대 올해 3大 세계대학평가 모두 대폭 상승</span>
+                                <div class="more"><a href="#n">자세히 보기</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="prev">이전 바로가기</button>
+                    <button class="next">다음 바로가기</button>
+                    <div class="page">
+                        <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                        <button class="play">재생</button>
+                        <button class="pause">멈춤</button>
+                    </div>
+                </div>
+            </section>
             <section class="pnu_notice"></section>
             <section class="service"></section>
             <section class="schedule"></section>

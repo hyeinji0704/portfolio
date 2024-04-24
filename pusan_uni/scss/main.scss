@@ -17,10 +17,129 @@ setting.json  열어서 추가
 @import "default", "common", "layout";
 
 .visual {
-    height: 100vh;
-    @include background;
-    background-size: cover;
-    background-image: url(../images/visual_bg01.png);
+    position: relative;
+    .swiper{
+        height: 100vh;
+        .swiper-slide {
+            img {
+                display:block; width:100%; height:100%; object-fit:cover; 
+            }
+            .tit {
+                color: $white;
+                @include position_left;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                letter-spacing: -0.05em;
+                p {
+                    font-size: 28px;
+                    margin-bottom: 18px;
+                    font-weight: 500;
+                }
+                span {
+                    font-size: 28px;
+                    margin-top: 28px;
+                    @include block;
+                    font-weight: 500;
+                }
+                h2 {
+                    white-space: nowrap;
+                    font-size: 65px;
+                    font-weight: 700;
+                    line-height: 80px;
+                }
+                .more {
+                    margin-top: 75px;
+                    a {
+                        padding: 18px 57px;
+                        background-color: rgba($color: $point_100, $alpha: 0.8);
+                        @include border-radius(5px);
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+                }
+                &.tit02, &.tit03{
+                    >h2 {
+                        font-size: 65px;
+                    }
+                }
+                &.tit03 {
+                    left: 160px;
+                    transform: translate(0,-40%);
+                    text-align: left;
+                }
+            }
+        }
+        .prev, .next {
+            @include font_none;
+            z-index: 10;
+            display: block;
+            top: 50%;
+            @include transformY;
+            @include background;
+            background-size: 28px auto;
+            width: 65px;
+            height: 85px;
+            @include border-radius(5px);
+            background-color: rgba($color: $grey_100, $alpha: 0.5);
+        }
+        .prev {
+            @include position_left;
+            left: 1.8%;
+            background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_219_5049' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect width='28' height='28' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_219_5049)'%3E%3Cpath d='M18.6667 25.6667L7 14L18.6667 2.33337L20.7375 4.40421L11.1417 14L20.7375 23.5959L18.6667 25.6667Z' fill='%23EEEEEE'/%3E%3C/g%3E%3C/svg%3E%0A");
+        }
+        .next {
+            @include position_right;
+            right: 1.8%;
+            background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_219_5052' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect width='28' height='28' transform='matrix(-1 0 0 1 28 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_219_5052)'%3E%3Cpath d='M9.33333 25.6667L21 14L9.33333 2.33337L7.2625 4.40421L16.8583 14L7.2625 23.5959L9.33333 25.6667Z' fill='%23EEEEEE'/%3E%3C/g%3E%3C/svg%3E%0A");
+        }
+        .page {
+            @include position_left;
+            z-index: 10;
+            left: 50%;
+            bottom: 0;
+            width: 171px;
+            height: 40px;
+            @include transformX;
+            border-radius: 5px 5px 0 0;
+            background-color: $white;
+            .swiper-pagination {
+                text-align: left;
+                width: calc(100% - 63px);
+                bottom: auto;
+                left: 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .swiper-pagination-bullet {
+                    margin: 0;
+                    &.swiper-pagination-bullet-active {
+                        width: 26px;
+                        @include border-radius(20px);
+                    }   
+                }
+            }
+            .play, .pause {
+                @include position_right;
+                right: 16px;
+                top: 50%;
+                @include transformY;
+                width: 23px;
+                height: 23px;
+                @include background;
+                @include font_none;
+            }
+            .play {
+                @include none;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='14' viewBox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5859 7L0.0335688 13.0924L0.0335693 0.907587L10.5859 7Z' fill='black'/%3E%3C/svg%3E%0A");
+            }
+            .pause {
+                background-image: url("data:image/svg+xml,%3Csvg width='10' height='12' viewBox='0 0 10 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='3' height='12' fill='black'/%3E%3Crect x='7' width='3' height='12' fill='black'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
 }
 .pnu_notice {
     height: 1000px;

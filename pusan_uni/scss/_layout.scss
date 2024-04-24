@@ -44,7 +44,7 @@
                         &::after {
                             @include position_right;
                             right: 15px;
-                            top: 8px;
+                            top: 6px;
                             content: "";
                             @include background;
                             width: 12px;
@@ -139,8 +139,9 @@
                     >a {
                         &::after {
                             @include position_right;
-                            right: -26px;
-                            top: 3.5px;
+                            right: -25px;
+                            top: 50%;
+                            @include transformY;
                             @include background;
                             @include content;
                             width: 22px;
@@ -156,8 +157,13 @@
                 }
                 &.on {
                     color: $point_100;
-                    ::after {
+                    >a::before {
                         @include position_left;
+                        bottom: -9px;
+                        @include content;
+                        width: 100%;
+                        height: 4px;
+                        background-color: $point_100;
                     }
                     .depth02 {
                         display: flex;
@@ -181,7 +187,7 @@
                     @include content;
                     width: 100vw;
                     height: 100%;
-                    background-color: rgba($color: $point_100, $alpha: 0.9);
+                    background-color: rgba($color: $point_100, $alpha: 0.95);
                 }
                 &::after {
                     @include position_right;
@@ -210,10 +216,10 @@
                         &::after {
                             @include position_left;
                             @include content;
-                            bottom: -12px;
+                            bottom: -8px;
                             width: 100%;
-                            height: 3px;
-                            background-color: $white;
+                            height: 2px;
+                            background-color: rgba($color: $white, $alpha: 0.8);
                         }
                         }
                     }
@@ -301,7 +307,7 @@
             }
         }
     }
-    &.menu_over {
+    &.menu_over, &.fixed{
         background-color: $white;
         color: $main_color;
         .logo {
