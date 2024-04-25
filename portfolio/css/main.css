@@ -348,6 +348,9 @@ section {
 .index .cnt li.hospital::after {
     background: url(../images/index02_bg.png) no-repeat center center /cover ;
 }
+.index .cnt li.pusan_uni::after {
+    background: url(../images/index03_bg.png) no-repeat center center /cover ;
+}
 .index .cnt li a {
     display: flex;
     position: relative;
@@ -403,11 +406,11 @@ section {
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54004 7.30225C0.987753 7.30225 0.540038 7.74996 0.540039 8.30225C0.54004 8.85453 0.987756 9.30225 1.54004 9.30225L1.54004 7.30225ZM20.0533 9.00932C20.4438 8.6188 20.4438 7.98563 20.0533 7.59511L13.6893 1.23116C13.2988 0.840634 12.6656 0.840635 12.2751 1.23116C11.8846 1.62168 11.8846 2.25485 12.2751 2.64537L17.932 8.30222L12.2751 13.9591C11.8846 14.3496 11.8846 14.9828 12.2751 15.3733C12.6657 15.7638 13.2988 15.7638 13.6893 15.3733L20.0533 9.00932ZM1.54004 9.30225L19.3462 9.30222L19.3462 7.30222L1.54004 7.30225L1.54004 9.30225Z' fill='black'/%3E%3C/svg%3E%0A");
 }
 /*제작수정멘트*/
-.index .cnt li.num03 ,.index .cnt li.num04 {
+.index .cnt li.num04 {
     color: #6a6a6a;
 }
 
-.index .cnt li.num03  a .sub span , .index .cnt li.num04 a .sub span {
+.index .cnt li.num04 a .sub span {
     border: 1px solid #6a6a6a;
 }
 /*제작수정멘트*/

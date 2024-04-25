@@ -12,7 +12,7 @@ $(document).ready(function(){
         mousewheel: true,
         freeMode: true,
     });
-    $('.index .cnt li').not('.num03, .num04').on('mouseenter', function(){
+    $('.index .cnt li').not('.num04').on('mouseenter', function(){
         $('.index .cnt li').removeClass('on')
         $(this).addClass('on')
     })
@@ -37,6 +37,9 @@ $(document).ready(function(){
     });
     $('.index ul li.hospital').on('click', function(){
         swiper.slideTo(4, 500)
+    });
+    $('.index ul li.pusan_uni').on('click', function(){
+        swiper.slideTo(5, 500)
     });
 
     var cursor = document.querySelector(".cursor");
