@@ -141,7 +141,204 @@ setting.json  열어서 추가
         }
     }
 }
+
 .pnu_notice {
-    height: 1000px;
-    background-color: $main_color;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        .tit {
+            display: flex;
+            align-items: center;
+            i {
+                @include font_none;
+                width: 100px;
+                height: 61px;
+                @include background;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='61' viewBox='0 0 100 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_307_3055)'%3E%3Cg opacity='0.97'%3E%3Cpath d='M14.8198 25.3127C14.8198 29.5503 14.8198 34.579 14.933 39.6641L20.9854 40.2856V42.2067H0V40.2856L5.09079 39.7771C5.26048 34.0704 5.26048 28.2508 5.26048 22.3746V19.8885C5.26048 14.0124 5.26048 8.19273 5.09079 2.37307L0 1.92105V0H17.2521C30.0922 0 35.2396 4.57663 35.2396 12.5433C35.2396 19.606 30.4316 25.3127 16.9693 25.3127H14.8198ZM14.933 2.14706C14.8198 7.96672 14.8198 13.8994 14.8198 19.8885V23.2221H16.6865C23.2479 23.2221 26.4155 18.815 26.4155 12.4868C26.4155 5.65016 23.1348 2.14706 17.139 2.14706H14.933Z' fill='%23005BAA'/%3E%3C/g%3E%3Cg opacity='0.97'%3E%3Cpath d='M68.7931 20.216L63.5892 20.9505L63.1932 60.6146H58.2156L33.2707 25.4706L33.6101 57.733L41.1897 58.5805V60.5016H25.4648V58.5805L30.6688 57.7895L31.0081 22.25L29.9334 20.668L25.9174 20.216V18.2949H39.5494L60.9872 47.9017L60.7044 21.007L53.1813 20.216V18.2949H68.7931V20.216Z' fill='%23005BAA'/%3E%3C/g%3E%3Cg opacity='0.97'%3E%3Cpath d='M100 1.92105L94.174 2.76858L93.9477 24.4652C93.778 37.4605 88.2347 43.3367 78.2229 43.3367C68.211 43.3367 61.7061 38.7601 61.7061 25.4257V19.267C61.7061 13.7299 61.7061 8.02322 61.5364 2.37307L56.6719 1.92105V0H76.8088V1.92105L71.3786 2.42957C71.2089 7.96672 71.2089 13.6734 71.2089 19.267V24.5782C71.2089 34.918 74.7159 38.7036 81.2208 38.7036C87.7257 38.7036 91.572 34.579 91.4589 24.3522L91.2327 2.76858L84.7843 1.92105V0H100V1.92105Z' fill='%23005BAA'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_307_3055'%3E%3Crect width='100' height='60.6205' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            }
+            h2 {
+                margin-left: 5px;
+                font-size: $font_large;
+                font-weight: 700;
+                color: $tit_color;
+            }
+        }
+        .notice {
+            margin-top: 100px;
+            width: 62%;
+            position: relative;
+            .more {
+                @include position_right;
+                right: 20px;
+                top: 24.5px;
+                width: 22px;
+                height: 22px;
+                @include font_none;
+                @include background;
+                background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.48848 12.6066H0.238281V9.57116H9.48848V0.464844H12.5719V9.57116H21.8221V12.6066H12.5719V21.7129H9.48848V12.6066Z' fill='%23ADADAD'/%3E%3C/svg%3E%0A");
+            }
+            .cnt {
+                @include position_right;
+                top: 20px;
+                width: 100%;
+                .list {
+                    display: flex;
+                    position: relative;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-right: 30px;
+                    >li {
+                        &:first-child {
+                            button {
+                                &::after {
+                                    @include none;
+                                }
+                            }
+                        }
+                        button {
+                            color: $grey_100;
+                            position: relative;
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-right: 50px;
+                            &::after {
+                                @include position_left;
+                                left: -25px;
+                                top: 7px;
+                                width: 1px;
+                                height: 14px;
+                                background-color: $grey_200;
+                                @include content;
+                            }
+                        }   
+                        .detail {
+                            border-top: 3px solid $tit_color;
+                            width: 100%;
+                            display: none;
+                            @include position_left;
+                            top: 75px;
+                            li {
+                                >a {
+                                    display: flex;
+                                    line-height: 77px;
+                                    justify-content: space-between;
+                                    white-space: nowrap;
+                                    position: relative;
+                                    padding-left: 214px;
+                                    padding-right: 37px;
+                                    border-bottom: 1px solid #a5a5a5;
+                                    strong {
+                                        @include position_left;
+                                        top: 0;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        color: $point_100;
+                                        font-weight: 600;
+                                        width: 90px;
+                                        margin-left: 45px;
+                                        &::after {
+                                            @include position_left;
+                                            @include left_50;
+                                            width: 100%;
+                                            height: 30px;
+                                            border: 1px solid $point_100;
+                                            @include border-radius_5;
+                                            @include content;
+                                        }
+                                    }
+                                    span {
+                                        display: block;
+                                        font-size: $font_regular;
+                                        font-weight: 700;
+                                    }
+                                    em {
+                                        color: $grey_100;
+                                    }
+                                    &:hover {
+                                        span {
+                                            text-decoration: underline 2px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.on {
+                            .detail {
+                                @include block;
+                            }
+                            button {
+                                font-size: 25px;
+                                color: $point_100;
+                                &::before {
+                                    @include position_left;
+                                    left: 50%;
+                                    top: -10px;
+                                    @include transformX;
+                                    width: 9px;
+                                    height: 9px;
+                                    background-color: $point_100;
+                                    @include border-radius(50%);
+                                    @include content;
+                                }
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+        .research {
+            position: relative;
+            width: 36%;
+            padding: 93px 70px 54px 68px;
+            background-color: $point_100;
+            @include border-radius_5;
+            color: $white;
+            >.tit {
+                h2{
+                    color: $white;
+                }
+                i {
+                    background-image: url("data:image/svg+xml,%3Csvg width='100' height='61' viewBox='0 0 100 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_307_3087)'%3E%3Cg opacity='0.97'%3E%3Cpath d='M14.8198 25.3127C14.8198 29.5503 14.8198 34.579 14.933 39.6641L20.9854 40.2856V42.2067H0V40.2856L5.09079 39.7771C5.26048 34.0704 5.26048 28.2508 5.26048 22.3746V19.8885C5.26048 14.0124 5.26048 8.19273 5.09079 2.37307L0 1.92105V0H17.2521C30.0922 0 35.2396 4.57663 35.2396 12.5433C35.2396 19.606 30.4316 25.3127 16.9693 25.3127H14.8198ZM14.933 2.14706C14.8198 7.96672 14.8198 13.8994 14.8198 19.8885V23.2221H16.6865C23.2479 23.2221 26.4155 18.815 26.4155 12.4868C26.4155 5.65016 23.1348 2.14706 17.139 2.14706H14.933Z' fill='white'/%3E%3C/g%3E%3Cg opacity='0.97'%3E%3Cpath d='M68.7931 20.216L63.5892 20.9505L63.1932 60.6146H58.2156L33.2707 25.4706L33.6101 57.733L41.1897 58.5805V60.5016H25.4648V58.5805L30.6688 57.7895L31.0081 22.25L29.9334 20.668L25.9174 20.216V18.2949H39.5494L60.9872 47.9017L60.7044 21.007L53.1813 20.216V18.2949H68.7931V20.216Z' fill='white'/%3E%3C/g%3E%3Cg opacity='0.97'%3E%3Cpath d='M100 1.92105L94.174 2.76858L93.9477 24.4652C93.778 37.4605 88.2347 43.3367 78.2229 43.3367C68.211 43.3367 61.7061 38.7601 61.7061 25.4257V19.267C61.7061 13.7299 61.7061 8.02322 61.5364 2.37307L56.6719 1.92105V0H76.8088V1.92105L71.3786 2.42957C71.2089 7.96672 71.2089 13.6734 71.2089 19.267V24.5782C71.2089 34.918 74.7159 38.7036 81.2208 38.7036C87.7257 38.7036 91.572 34.579 91.4589 24.3522L91.2327 2.76858L84.7843 1.92105V0H100V1.92105Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_307_3087'%3E%3Crect width='100' height='60.6205' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                }
+            }
+            .more {
+                @include position_right;
+                top: 0;
+                text-align: center;
+                a {
+                    display: block;
+                    background-color: $point_200;
+                    width: 67px;
+                    height: 67px;
+                    @include border-radius(0 5px 0 5px);
+                    @include font_none;
+                    @include background;
+                    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.48828 12.6063H0.238281V9.57096H9.48828V0.464844H12.5716V9.57096H21.8216V12.6063H12.5716V21.7125H9.48828V12.6063Z' fill='white'/%3E%3C/svg%3E%0A");
+                }
+            }
+            .swiper {
+                margin-top: 36px;
+                li {
+                    a {
+                        .photo {
+                            margin-bottom: 21px;
+                            img {
+                                @include border-radius_5;
+                                width: 100%;
+                            }
+                        }
+                        span {
+                            font-weight: 500;
+                            display: block;
+                            font-size: 22px;
+                            line-height: 1.4;
+                            height: 2.8em;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -20,18 +20,22 @@ $font_large : 36px;
 $font_medium : 26px;
 $font_regular : 18px;
 $font_small : 14px;
+@mixin border-radius_5 {
+    border-radius: 5px;
+}
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
        -moz-border-radius: $radius;
         -ms-border-radius: $radius;
             border-radius: $radius;
   }
-  
 @mixin content {
     content: "";
 }
 @mixin left_50 {
+    top: 50%;
     left: 50%;
+    transform: translate(-50%,-50%);
 }
 @mixin translate {
     transform: translate(-50%,-50%);
