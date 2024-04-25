@@ -12,7 +12,6 @@ $point_200 : #60799D;
 $point_300 : #E6E9EC;
 $point_400 : #74D1CC;
 $point_500 : #5E8FCA;
-$point_600 : #5E8FCA;
 $point_700 : #092A6C;
 $point_800 : #E0F0FF;
 $font_default : 15px;
@@ -20,6 +19,9 @@ $font_large : 36px;
 $font_medium : 26px;
 $font_regular : 18px;
 $font_small : 14px;
+@mixin shadow  {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .1);
+}
 @mixin border-radius_5 {
     border-radius: 5px;
 }
