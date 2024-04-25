@@ -21,6 +21,17 @@ $(document).ready(function(){
 
     });
 
+    $('.visual .swiper .page .pause').on('click', function(){
+        visual_swiper.autoplay.stop(); /* 일시정지 기능 */
+        $('.visual .swiper .page .play').show()
+        $('.visual .swiper .page .pause').hide()
+    })
+    $('.visual .swiper .play').on('click', function(){
+        visual_swiper.autoplay.start();  /* 재생 기능 */
+        $('.visual .swiper .page .pause').show()
+        $('.visual .swiper .page .play').hide()
+    })
+
     const research_swiper = new Swiper('.research .swiper', { /* 팝업을 감싼는 요소의 class명 */
         slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 0, /* 팝업과 팝업 사이 여백 */
@@ -50,16 +61,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.visual .swiper .pause').on('click', function(){
-        swiper.autoplay.stop(); /* 일시정지 기능 */
-        $('.visual .swiper .play').show()
-        $('.visual .swiper .pause').hide()
-    })
-    $('.visual .swiper .play').on('click', function(){
-        swiper.autoplay.start();  /* 재생 기능 */
-        $('.visual .swiper .pause').show()
-        $('.visual .swiper .play').hide()
-    })
+    
 
     $('.notice .list li').on('click', function(){
         $('.notice .list li').removeClass('on')
